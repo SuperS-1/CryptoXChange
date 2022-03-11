@@ -1,2 +1,2 @@
 # CryptoXChange
-Simple website built using CSS and Bootstrap
+A simple static website built using CSS and Bootstrap
