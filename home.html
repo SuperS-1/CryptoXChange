@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CryptoXChange</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+      body {
+        background-color: #081424;
+        font-family: sans-serif;
+      }
+
+      .navbar {
+        background-color: #081424;
+        margin: 16px 0px 0px 0px;
+      }
+      .navbar-brand {
+        margin: 0px 130px 0px 210px;
+      }
+      #navlist {
+        font-size: 18px;
+      }
+      #nft {
+        margin: 1px 0px 0px 20px;
+      }
+      #products {
+        margin: 1px 0px 0px 40px;
+      }
+      #prices {
+        margin: 1px 0px 0px 35px;
+      }
+      #support {
+        margin: 1px 0px 0px 35px;
+      }
+      #lang {
+        margin: 1px 0px 0px 35px;
+      }
+      #region {
+        margin: -1px 0px 0px 35px;
+      }
+      #search {
+        margin: 0px 140px 0px 0px;
+      }
+      .breadcrumb {
+        text-decoration: none;
+        margin: 10px 0px 0px 111px;
+      }
+
+      .page-header {
+        padding-left: 20px;
+      }
+
+      .page-content {
+        margin: 0 15%;
+      }
+
+      .heading1 {
+          margin: 0 20%;
+      }
+
+      .heading2 {
+          margin: 0 10%;
+      }
+      #desc1 {
+        color: rgb(218, 197, 197);
+        font-size: 20px;
+        margin: 0 460px;
+        margin-right: 200px;
+        margin-top: 8px;
+      }
+      #desc2 {
+        color: rgb(218, 197, 197);
+        font-size: 20px;
+        margin: 0px 260px 0px 270px;
+      }
+      #desc3 {
+        color: rgb(218, 197, 197);
+        font-size: 20px;
+        margin: -15px 330px 60px 300px;
+        text-align: center;
+      }
+      .bullet {
+        margin: 0 430px;
+        margin-top: -44px;
+      }
+
+      h1 {
+          text-align: center;
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 900;
+          font-size: 72px;
+          margin-top: 110px;
+          color: white;
+      }
+          
+      h2 {
+          color: #d1633c;
+          font-size: 1;
+      }
+
+      .cryptoname {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 600;
+          font-size: 26px;
+          margin: 0px 0px 0px 15px;
+          color: white;
+      }
+      #abb1{
+        color: rgb(125, 125, 125);
+        font-size: 20px;
+        font-weight: 500;
+        margin: 1px 0px 0px 20px;
+      }
+      #abb2{
+        color: rgb(125, 125, 125);
+        font-size: 20px;
+        font-weight: 500;
+        margin: 1px 0px 0px 54px;
+      }
+      #abb3{
+        color: rgb(125, 125, 125);
+        font-size: 20px;
+        font-weight: 500;
+        margin: 2px 0px 0px 36px;
+      }
+      #abb4{
+        color: rgb(125, 125, 125);
+        font-size: 20px;
+        font-weight: 500;
+        margin: 2px 0px 0px 46px;
+      }
+      #abb5{
+        color: rgb(125, 125, 125);
+        font-size: 20px;
+        font-weight: 500;
+        margin: 2px 0px 0px 40px;
+      }
+      .price {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 600;
+          margin: -5px 0px 0px 175px;
+          color: white;
+          font-size: 32px;
+      }
+      #prcnt1 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: normal;
+          font-size: 20px;
+          color: rgb(0, 255, 0);
+          margin: 3px 40px 0px 150px;
+      }
+      #prcnt2 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: normal;
+          font-size: 20px;
+          color: rgb(0, 255, 0);
+          margin: 3px 40px 0px 169px;
+      }
+      #prcnt3 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: normal;
+          font-size: 20px;
+          color: rgb(0, 255, 0);
+          margin: 3px 40px 0px 237px;
+      }
+      #prcnt4 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: normal;
+          font-size: 20px;
+          color: rgb(0, 255, 0);
+          margin: 3px 40px 0px 162px;
+      }
+      #prcnt5 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: normal;
+          font-size: 20px;
+          margin-top: 30px;
+          color: rgb(255, 0, 0);
+          margin: 3px 40px 0px 220px;
+      }
+      #trade1 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 600;
+          font-size: 20px;    
+          color: rgb(36, 32, 32);
+          padding: 6px 28px;
+          text-align: center;
+          margin: 0px 4px 0px 110px;
+      }
+      #trade2 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 600;
+          font-size: 20px;    
+          color: rgb(36, 32, 32);
+          padding: 6px 28px;
+          text-align: center;
+          margin: 0px 4px 0px 110px;
+      }
+      #trade3 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 600;
+          font-size: 20px;    
+          color: rgb(36, 32, 32);
+          padding: 6px 28px;
+          text-align: center;
+          margin: 0px 4px 0px 110px;
+      }
+      #trade4 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 600;
+          font-size: 20px;    
+          color: rgb(36, 32, 32);
+          padding: 6px 28px;
+          text-align: center;
+          margin: 0px 4px 0px 110px;
+      }
+      #trade5 {
+          font-family: Trebuchet MS, sans-serif;
+          font-weight: 600;
+          font-size: 20px;    
+          color: rgb(36, 32, 32);
+          padding: 6px 28px;
+          text-align: center;
+          margin: 0px 4px 0px 112px;
+      }
+
+      .chart-division {
+        color: #9ca2a7;
+      }
+
+      a.highlight:hover {
+        color: #ff0000;
+      }
+
+      footer {
+        background: #081424;
+        padding-top: 240px;
+        padding-right: 50px;
+        padding-bottom: 70px;
+        padding-left: 50px;
+        margin: 0px 150px 0px 150px;
+        font-family: Trebuchet MS, sans-serif;
+        font-weight: 900;
+        color: white;
+      }
+      footer a {
+        color: #b8bec4;
+      }
+      a:link { 
+        text-decoration: none; 
+      }
+      
+      .copyright {
+        color: #9ca2a7;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 100;
+      }
+      .fa:hover {
+        opacity: 0.7;
+      }
+      #socials {
+        margin: 0px 0px 0px 0px;
+      }
+      #twtr {
+        margin: 70px 0px 0px 0px;
+        font-size: 25px;
+      }
+      #fb {
+        margin: 70px 0px 0px 70px;
+        font-size: 25px;
+      }
+      #ig {
+        margin: 70px 0px 0px 130px;
+        font-size: 25px;
+      }
+      #yt {
+        margin: 30px 0px 0px 0px;
+        font-size: 25px;
+      }
+      #ldin {
+        margin: 30px 0px 0px 70px;
+        font-size: 25px;
+      }
+      #tg {
+        margin: 30px 0px 0px 130px;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" mb-0 h1>
+          <img src="logo.png" alt="logo" width="25" height="25" class="align-content-lg-between" id="logo">
+          CryptoXChange
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navlist">
+          <ul class="navbar-nav">
+            <li class="nav-item" id="nft">
+              <a class="nav-link" aria-current="page" href="#">NFT</a>
+            </li>
+            <li class="nav-item" id="products">
+              <a class="nav-link" aria-current="page" href="#">Products</a>
+            </li>
+            <li class="nav-item" id="prices">
+              <a class="nav-link" href="#">Prices</a>
+            </li>
+            <li class="nav-item" id="support">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+            <li class="nav-item dropdown" id="lang">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                EN
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">FRE</a></li>
+                <li><a class="dropdown-item" href="#">JPN</a></li>
+                <li><a class="dropdown-item" href="#">GER</a></li>
+              </ul>
+            </li>
+            <li class="nav-item" id="region">
+              <a class="nav-link" href="#">
+                <img src="globe.png" alt="globe" width="19" height="19">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <form class="d-flex" id="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" size="10">
+          <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+      </ol>
+    </nav>
+
+    <div class="heading1">
+      <h1>World's Fastest Growing Crypto App</h1>
+    </div>
+    <br>
+
+    <div id="desc1">
+      <p>Join 100k+ users buying and selling 100+ cryptocurrencies at true cost</p>  
+    </div>
+    <div class="bullet">
+      <img src="bluetick.png" alt="bullet" width="19" height="19">
+    </div>
+    <div id="desc1">
+      <p>Spend with the CryptoXChange.com Visa Card and get up to 8% back</p>
+    </div>
+    <div class="bullet">
+      <img src="bluetick.png" alt="bullet" width="19" height="19">
+    </div>
+    <div id="desc1">
+      <p>Grow your portfolio by earning up to 14% interest on your crypto assets</p>
+    </div>
+    <div class="bullet">
+      <img src="bluetick.png" alt="bullet" width="19" height="19">
+    </div>
+    <br>
+    <br>
+
+    <div class="page-content">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-2">
+            <img src="appstore.png" alt="playstore link" width="143" height="46" id="store-links">
+          </div>
+          <div class="col col-lg-2">
+            <img src="playstore.png" alt="playstore link" width="160" height="46" id="store-links">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div class="heading2">
+        <h1>Buy crypto at true cost</h1>
+      </div>
+      <br>
+      <div id="desc2">
+        <p>Buy and sell 100+ cryptocurrencies with 20+ fiat currencies</p>  
+      </div>
+      <div id="desc3">
+        <p>using bank transfers or your credit/debit card.</p>  
+      </div>
+      <br>
+      
+      <div class="flex-container">
+        <div class="row">
+          <div class="col col-lg-1">
+            <h3 class="cryptoname">Bitcoin</h3>
+          </div>
+          <div class="col col-lg-1">
+            <p id="abb1">BTC</p>
+          </div>
+          <div class="col">
+            <p class="price">$39,716.99</p>
+          </div>
+          <div class="col">
+            <p id=prcnt1>+1.17%</p>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-light btn-lg" id="trade1">Trade</button>
+          </div>
+        </div>
+      </div>
+      <hr class="chart-division" size="5px" height="3px">
+      <div class="flex-container">
+        <div class="row">
+          <div class="col col-lg-1">
+            <h3 class="cryptoname">Ethereum</h3>
+          </div>
+          <div class="col col-lg-1">
+            <p id="abb2">ETH</p>
+          </div>
+          <div class="col">
+            <p class="price">$2,782.43</p>
+          </div>
+          <div class="col">
+            <p id=prcnt2>+3.81%</p>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-light btn-lg" id="trade2">Trade</button>
+          </div>
+        </div>
+      </div>
+      <hr class="chart-division" size="5px" height="3px">
+      <div class="flex-container">
+        <div class="row">
+          <div class="col col-lg-1">
+            <h3 class="cryptoname">Cardano</h3>
+          </div>
+          <div class="col col-lg-1">
+            <p id="abb3">ADA</p>
+          </div>
+          <div class="col">
+            <p class="price">$1.38</p>
+          </div>
+          <div class="col">
+            <p id=prcnt3>+0.20%</p>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-light btn-lg" id="trade3">Trade</button>
+          </div>
+        </div>
+      </div>
+      <hr class="chart-division" size="5px" height="3px">
+      <div class="flex-container">
+        <div class="row">
+          <div class="col col-lg-1">
+            <h3 class="cryptoname">Dogecoin</h3>
+          </div>
+          <div class="col col-lg-1">
+            <p id="abb4">DOGE</p>
+          </div>
+          <div class="col">
+            <p class="price">$0.200275</p>
+          </div>
+          <div class="col">
+            <p id=prcnt4>+0.86%</p>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-light btn-lg" id="trade4">Trade</button>
+          </div>
+        </div>
+      </div>
+      <hr class="chart-division" size="5px" height="3px">
+      <div class="flex-container">
+        <div class="row">
+          <div class="col col-lg-1">
+            <h3 class="cryptoname">Polkadot</h3>
+          </div>
+          <div class="col col-lg-1">
+            <p id="abb5">DOT</p>
+          </div>
+          <div class="col">
+            <p class="price">$18.83</p>
+          </div>
+          <div class="col">
+            <p id=prcnt5>-0.33%</p>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-light btn-lg" id="trade5">Trade</button>
+          </div>
+        </div>
+      </div>
+      <hr class="chart-division" size="5px" height="3px">
+    </div>
+  </body>
+
+  <footer class="text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>App</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                  <li><a href="">Buy and Sell</a></li>
+                  <li><a href="">CryptoXChange Earn</a></li>
+                  <li><a href="">CryptoXChange Credit</a></li>
+                  <li><a href="">CryptoXChange Pay</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Resources</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                  <li><a href="">Prices</a></li>
+                  <li><a href="">Site Widgets</a></li>
+                  <li><a href="">Tax</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Research</a></li>
+                  <li><a href="">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+                <h5>Company</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Security</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">NFT</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3">
+              <div class="flex-container" id="socials">
+                <div class="row">
+                  <div class="col col-lg-1">
+                    <i class="fa fa-twitter" id="twtr"></i>
+                  </div>
+                  <div class="col col-lg-1">
+                    <i class="fa fa-facebook" id="fb"></i>
+                  </div>
+                  <div class="col">
+                    <i class="fa fa-instagram" id="ig"></i>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-lg-1">
+                    <i class="fa fa-youtube-play" id="yt"></i>
+                  </div>
+                  <div class="col col-lg-1">
+                    <i class="fa fa-linkedin" id="ldin"></i>
+                  </div>
+                  <div class="col">
+                    <i class="fa fa-telegram" id="tg"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 copyright mt-3">
+              <p class="float-left">
+                <a href="#">Back to top</a>
+              </p>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+          <small>&copy; Copyright 2021 CryptoXChange. All rights reserved.</small>
+        </div>
+    </div>
+  </footer>
+</html>
